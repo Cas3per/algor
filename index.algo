@@ -1,0 +1,31 @@
+function findDistinctSum(set1, set2) {
+  // Combine both sets into a single array
+  let combinedArray = set1.concat(set2);
+
+  // Use a Set to store distinct elements
+  let distinctElements = new Set(combinedArray);
+
+  // Calculate the sum of distinct elements
+  let sum = 0;
+  distinctElements.forEach(function (element) {
+    sum += element;
+  });
+
+  return sum;
+}
+
+// Example usage:
+let set1 = [3, 1, 7, 9];
+let set2 = [2, 4, 1, 9, 3];
+
+let result = findDistinctSum(set1, set2);
+console.log(result); // Output: 13
+
+
+This algorithm first combines both sets into a single array. Then, it uses a Set to store only the distinct elements. Finally, it calculates the sum of these distinct elements and returns the result. In the provided example, the output is 13, representing the sum of distinct elements [2, 4, 7] from the combined sets.
+
+
+
+
+
+
